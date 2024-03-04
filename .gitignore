@@ -1,0 +1,6 @@
+.vscode
+build
+
+pico_sdk_sigrok/build/*
+pico_sdk_sigrok/pico_sdk_import.cmake
+!pico_sdk_sigrok/build/*uf2

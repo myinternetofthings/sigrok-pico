@@ -11,6 +11,7 @@ add_executable(pico_sdk_sigrok
   pico_sdk_sigrok.c
 )
 
+add_definitions(-DPICO_STDIO_USB_CONNECTION_WITHOUT_DTR=1)
 pico_enable_stdio_usb(pico_sdk_sigrok 1)
 pico_enable_stdio_uart(pico_sdk_sigrok 0)
 

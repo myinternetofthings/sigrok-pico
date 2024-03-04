@@ -6,8 +6,8 @@ It is recommended that you read through the AnalyzerDetails.md for specifics on 
 4) Replug the PICO to reset it, and then use sigrok-cli to scan for avaliable serial ports
 > sigrok-cli --list-serial
 5) Use sigrok-cli to scan for the device based on the serial port you found above. The baudrate doesn't matter because we are CDC serial.
-> sigrok-cli  -l 2 -d raspberrypi-pico:conn=/dev/ttyACM0:serialcomm=115200/flow=0 --scan 
+> sigrok-cli  -l 2 -d raspberrypi-pico:conn=/dev/ttyACM0:serialcomm=115200/flow=0/dtr=1 --scan 
 6) Do a first trace 
-> ~/github/sigrok-cli/sigrok-cli  -l 2 -d raspberrypi-pico:conn=/dev/ttyACM0:serialcomm=115200/flow=0 --config samplerate=10000  --channels D2,D3,D4,D5 --samples 1000
+> ~/github/sigrok-cli/sigrok-cli  -l 2 -d raspberrypi-pico:conn=/dev/ttyACM0:serialcomm=115200/flow=0/dtr=1 --config samplerate=10000  --channels D2,D3,D4,D5 --samples 1000
 7) Aternatively to using sigrok-cli use Pulseview.
 8) Go read AnalyzerDetails.md like you should have to begin with....
